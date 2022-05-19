@@ -5,9 +5,10 @@ public class Hanoi {
     static private Torre torre3;
 
     static public void solucaoHanoi(int totalDiscos){
-        torre2 = new Torre("Torre_2");
-        torre3 = new Torre("Torre_3");
+        torre2 = new Torre(totalDiscos,"Torre_2");
+        torre3 = new Torre(totalDiscos,"Torre_3");
         torre1= new Torre(totalDiscos, "Torre_1");
+        torre1.preencherTorre();
         desenhaTorres();
         hanoi(totalDiscos, torre1, torre2, torre3);
 
