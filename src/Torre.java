@@ -63,4 +63,14 @@ public class Torre {
     public String getNome() {
         return this.nome;
     }
+	public String[] getTorre() {
+		
+		String[] str = new String[capacidadeTorre+1];
+		Iterator<Disco> tp = torre.get();
+        for (int i = 0; tp.hasNext(); i++ ) {
+            str[i] = tp.next().getDesenho();
+        }
+        str[str.length-1] = getNome();
+		return str;
+	}
 }
